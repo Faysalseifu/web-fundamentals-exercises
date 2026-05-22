@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Semantic Elements</title>
+    <link rel="stylesheet" href="style.css">
+     
+</head>
+<body>
+
+    <!-- 
+      <header> : Encloses contextually isolated introductory layout elements, site branding graphics, metadata logs, or global identity components. 
+    -->
+    <header>
+        <h1 style="color: blue; text-align: center;">Website Branding & Title</h1>
+        <p>Your introductory tagline goes here.</p>
+    </header>
+
+    <!-- 
+      <nav> : Strictly reserved for blocks containing major internal or external site-wide navigation links.
+    -->
+    <nav>
+        <!-- <h2>Main Navigation</h2> -->
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- 
+      <main> : Contains the singular, dominant core content unique to that specific webpage document. 
+      It must not feature repetitive cross-page elements like sidebars or global headers.
+    -->
+    <main>
+        
+        <!-- 
+          <section> : Represents a generalized thematic grouping of relevant related assets, 
+          typically initialized with an explicit structural title heading (h1-h6).
+        -->
+        <section>
+            <h2>Thematic Grouping: Blog Posts</h2>
+            
+            <!-- 
+              <article> : Defines a completely independent, modular, self-contained layout block 
+              designed to be cleanly extracted and syndicated across distinct applications.
+            -->
+            <article>
+                <h3>Independent Blog Post Title</h3>
+                <p>This content is entirely self-contained. It makes sense even if extracted and put on another website or RSS feed.</p>
+            </article>
+
+            <article>
+                <h3>Another E-commerce Product Entry</h3>
+                <p>Product Details: This is another standalone block of content with its own distinct layout.</p>
+            </article>
+        </section>
+
+        <!-- 
+          <aside> : Wraps tangential, auxiliary data or sidebars that are peripherally related 
+          to the surrounding primary material.
+        -->
+        <aside>
+            <h3>Peripherally Related Info</h3>
+            <p>Here is a contextual tip, a promotional banner, or tangential data relevant to the surrounding context.</p>
+        </aside>
+
+    </main>
+
+    <!-- 
+      <footer> : Positioned at the terminal base of a page or internal block, encapsulating 
+      copyright registries, privacy policy references, primary contact addresses, etc.
+    -->
+    <footer>
+        <p>&copy; 2026 Website Footer Content. All Rights Reserved.</p>
+        <p>Contact: admin@domain.com | <a href="#privacy">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>
