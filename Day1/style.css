@@ -1,0 +1,93 @@
+/* Base Document Styles */
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Common Layout for demonstrating Semantic Blocks */
+header, nav, main, section, article, aside, footer {
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 800px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    display: block; /* Ensures they behave as blocks even in older browsers */
+}
+
+/* 
+  <header> : 
+  Encloses contextually isolated introductory layout elements, site branding graphics, 
+  metadata logs, or global identity components. While often deployed at the page root, 
+  it can also wrap internal components like individual card intros.
+*/
+header {
+    border-color: #ff9999;
+    background: #fff0f0;
+}
+
+/* 
+  <nav> : 
+  Strictly reserved for blocks containing major internal or external site-wide navigation links 
+  (e.g., primary menu item lists, pagination blocks, or directory index footers).
+*/
+nav {
+    border-color: #99ccff;
+    background: #f0f8ff;
+}
+
+/* 
+  <main> : 
+  Contains the singular, dominant core content unique to that specific webpage document. 
+  It must not feature repetitive cross-page elements like side navigation sidebars, 
+  copyright bars, or corporate logos.
+*/
+main {
+    border-color: #99ff99;
+    background: #f0fff0;
+}
+
+/* 
+  <section> : 
+  Represents a generalized thematic grouping of relevant related assets, 
+  typically initialized with an explicit structural title heading (h1-h6).
+*/
+section {
+    border-color: #ffcc99;
+    background: #fff8f0;
+}
+
+/* 
+  <article> : 
+  Defines a completely independent, modular, self-contained layout block designed to be 
+  cleanly extracted and cleanly syndicated across distinct applications (e.g., decoupled 
+  blog posts, independent e-commerce product grids, or custom dashboard interactive panels).
+*/
+article {
+    border-color: #cc99ff;
+    background: #f8f0ff;
+}
+
+/* 
+  <aside> : 
+  Wraps tangential, auxiliary data or sidebars that are peripherally related to the 
+  surrounding primary material (e.g., contextual tips, promotional banners, 
+  dictionary callouts, or contextual notes).
+*/
+aside {
+    border-color: #ffff99;
+    background: #fffff0;
+}
+
+/* 
+  <footer> : 
+  Positioned at the terminal base of a page or internal block, encapsulating copyright 
+  registries, privacy policy references, primary contact addresses, or essential index hyperlinks.
+*/
+footer {
+    border-color: #cccccc;
+    background: #f9f9f9;
+}
