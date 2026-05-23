@@ -1,93 +1,330 @@
-/* Base Document Styles */
+:root {
+  --bg: #08111f;
+  --panel: rgba(12, 24, 42, 0.9);
+  --panel-soft: rgba(14, 31, 57, 0.8);
+  --text: #ecf4ff;
+  --muted: #b4cae7;
+  --accent: #4fd1c5;
+  --accent-strong: #6d7dff;
+  --shadow: 0 24px 60px rgba(10, 18, 35, 0.35);
+  --radius: 24px;
+  --radius-sm: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-    font-family: system-ui, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(77, 105, 255, 0.32),
+      transparent 18%
+    ),
+    linear-gradient(180deg, #07101d, #0a1729 45%, #0d1d33 100%);
+  line-height: 1.6;
 }
 
-/* Common Layout for demonstrating Semantic Blocks */
-header, nav, main, section, article, aside, footer {
-    padding: 20px;
-    margin: 15px auto;
-    max-width: 800px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    display: block; /* Ensures they behave as blocks even in older browsers */
+img {
+  max-width: 100%;
 }
 
-/* 
-  <header> : 
-  Encloses contextually isolated introductory layout elements, site branding graphics, 
-  metadata logs, or global identity components. While often deployed at the page root, 
-  it can also wrap internal components like individual card intros.
-*/
-header {
-    border-color: #ff9999;
-    background: #fff0f0;
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
 }
 
-/* 
-  <nav> : 
-  Strictly reserved for blocks containing major internal or external site-wide navigation links 
-  (e.g., primary menu item lists, pagination blocks, or directory index footers).
-*/
-nav {
-    border-color: #99ccff;
-    background: #f0f8ff;
+.site-header {
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(12px);
+  background: rgba(5, 12, 24, 0.72);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* 
-  <main> : 
-  Contains the singular, dominant core content unique to that specific webpage document. 
-  It must not feature repetitive cross-page elements like side navigation sidebars, 
-  copyright bars, or corporate logos.
-*/
-main {
-    border-color: #99ff99;
-    background: #f0fff0;
+.nav-shell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-/* 
-  <section> : 
-  Represents a generalized thematic grouping of relevant related assets, 
-  typically initialized with an explicit structural title heading (h1-h6).
-*/
-section {
-    border-color: #ffcc99;
-    background: #fff8f0;
+.brand-block h1 {
+  margin: 0.2rem 0 0;
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
 }
 
-/* 
-  <article> : 
-  Defines a completely independent, modular, self-contained layout block designed to be 
-  cleanly extracted and cleanly syndicated across distinct applications (e.g., decoupled 
-  blog posts, independent e-commerce product grids, or custom dashboard interactive panels).
-*/
-article {
-    border-color: #cc99ff;
-    background: #f8f0ff;
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  font-size: 0.78rem;
+  margin: 0;
+  font-weight: 700;
 }
 
-/* 
-  <aside> : 
-  Wraps tangential, auxiliary data or sidebars that are peripherally related to the 
-  surrounding primary material (e.g., contextual tips, promotional banners, 
-  dictionary callouts, or contextual notes).
-*/
-aside {
-    border-color: #ffff99;
-    background: #fffff0;
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-/* 
-  <footer> : 
-  Positioned at the terminal base of a page or internal block, encapsulating copyright 
-  registries, privacy policy references, primary contact addresses, or essential index hyperlinks.
-*/
-footer {
-    border-color: #cccccc;
-    background: #f9f9f9;
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-nav a:hover {
+  color: var(--text);
+}
+
+.hero {
+  padding: 4.5rem 0 3rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 3.3vw, 2.8rem);
+  line-height: 1.1;
+  margin: 0.5rem 0 1rem;
+}
+
+.hero-copy {
+  color: var(--muted);
+  max-width: 45rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin: 1.4rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.85rem 1.3rem;
+  border: 1px solid transparent;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+  color: #03101d;
+}
+
+.btn-secondary {
+  border-color: rgba(255, 255, 255, 0.14);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.hero-metrics {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-metrics div {
+  min-width: 130px;
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hero-metrics strong,
+.trust-panel strong {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.hero-metrics span,
+.label {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.hero-highlight {
+  background: linear-gradient(
+    180deg,
+    rgba(26, 43, 76, 0.95),
+    rgba(12, 24, 42, 0.95)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.highlight-card h3 {
+  margin: 0.6rem 0;
+}
+
+.highlight-card p,
+.highlight-card li,
+.feature-card p,
+.step-block p,
+.section-intro p,
+.security p,
+.security-list {
+  color: var(--muted);
+}
+
+.highlight-card ul {
+  padding-left: 1.1rem;
+}
+
+.features,
+.workflow,
+.security {
+  padding: 2rem 0 3.5rem;
+}
+
+.section-intro {
+  margin-bottom: 1.5rem;
+}
+
+.section-intro h2 {
+  margin: 0.5rem 0 0.75rem;
+  font-size: clamp(1.8rem, 2.4vw, 2.3rem);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.feature-card,
+.step-block,
+.trust-panel {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+  padding: 1.3rem;
+  box-shadow: var(--shadow);
+}
+
+.feature-card h3,
+.step-block h3 {
+  margin-top: 0;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.step-block span {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+  color: #03101d;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.split-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.security-list {
+  padding-left: 1.2rem;
+}
+
+.trust-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.cta-banner {
+  padding: 1rem 0 4rem;
+}
+
+.cta-shell {
+  background: linear-gradient(
+    120deg,
+    rgba(24, 45, 80, 0.98),
+    rgba(16, 30, 57, 0.92)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.cta-shell h2 {
+  margin: 0.5rem 0 0;
+}
+
+.site-footer {
+  padding: 1rem 0 2rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .split-layout,
+  .card-grid,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-shell,
+  .nav-shell {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 3rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .site-nav {
+    gap: 0.75rem;
+  }
 }
