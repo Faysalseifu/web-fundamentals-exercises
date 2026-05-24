@@ -17,7 +17,7 @@
           <a href="#features">Features</a>
           <a href="#how-it-works">How it works</a>
           <a href="#security">Security</a>
-          <a href="#contact-form">Contact</a>
+          <a href="#register-form">Register</a>
         </nav>
       </div>
     </header>
@@ -37,7 +37,9 @@
               nearby, schedule confidently, and transact safely.
             </p>
             <div class="hero-actions">
-              <a href="#contact-form" class="btn btn-primary">Request a demo</a>
+              <a href="#register-form" class="btn btn-primary"
+                >Create account</a
+              >
               <a href="#features" class="btn btn-secondary">Explore platform</a>
             </div>
             <div class="hero-metrics">
@@ -59,6 +61,11 @@
           <aside class="hero-highlight">
             <p class="label">Live marketplace snapshot</p>
             <div class="highlight-card">
+              <div class="highlight-badges">
+                <span class="highlight-badge">New</span>
+                <span class="highlight-badge">Trusted host</span>
+                <span class="highlight-badge">Today</span>
+              </div>
               <h3>Bike + helmet bundle</h3>
               <p>2.3 km away • Available today • 4.9 trust score</p>
               <ul>
@@ -66,6 +73,16 @@
                 <li>Calendar-based booking</li>
                 <li>Escrow-protected payment</li>
               </ul>
+              <div class="highlight-meta">
+                <div>
+                  <strong>$24</strong>
+                  <span class="label">Daily rate</span>
+                </div>
+                <div>
+                  <strong>2 hrs</strong>
+                  <span class="label">Pickup window</span>
+                </div>
+              </div>
             </div>
           </aside>
         </div>
@@ -198,106 +215,148 @@
         </div>
       </section>
 
-      <section class="cta-banner" id="contact">
-        <div class="container cta-shell">
-          <div>
-            <p class="eyebrow">Ready to prototype?</p>
-            <h2>Bring this landing page into your next frontend sprint.</h2>
-          </div>
-          <a href="mailto:hello@citywiderental.example" class="btn btn-primary"
-            >Contact the team</a
-          >
-        </div>
-      </section>
-
-      <section class="contact-form-section" id="contact-form">
+      <section class="registration-section" id="register-form">
         <div class="container">
-          <div class="section-intro">
-            <p class="eyebrow">Request a demo</p>
-            <h2>Tell us what you want to rent or list.</h2>
-            <p>
-              Share a few details and we’ll help shape the next step for your
-              neighborhood rental experience.
-            </p>
-          </div>
-
-          <form class="contact-form-card">
-            <div class="contact-form-grid">
-              <div class="form-field">
-                <label for="name" class="form-label">Name</label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  class="form-input"
-                  placeholder="Jordan Lee"
-                  required
-                />
-              </div>
-
-              <div class="form-field">
-                <label for="email" class="form-label">Email</label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  class="form-input"
-                  placeholder="jordan@example.com"
-                  required
-                />
-              </div>
-
-              <div class="form-field">
-                <label for="city" class="form-label">City</label>
-                <input
-                  id="city"
-                  name="city"
-                  type="text"
-                  class="form-input"
-                  placeholder="New York"
-                  required
-                />
-              </div>
-
-              <div class="form-field">
-                <label for="interest" class="form-label"
-                  >I’m interested in</label
-                >
-                <select
-                  id="interest"
-                  name="interest"
-                  class="form-input"
-                  required
-                >
-                  <option value="">Select an option</option>
-                  <option value="listing">Listing an item</option>
-                  <option value="renting">Renting an item</option>
-                  <option value="partnership">Partnership or demo</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-field">
-              <label for="message" class="form-label">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                class="form-input form-textarea"
-                placeholder="Tell us what you want to build or rent."
-                rows="5"
-                required
-              ></textarea>
-            </div>
-
-            <div class="form-actions">
-              <button type="submit" class="btn btn-primary">
-                Send inquiry
-              </button>
-              <p class="form-note">
-                This form is ready for your next backend or email integration.
+          <div class="registration-shell">
+            <aside class="registration-copy">
+              <p class="eyebrow">Create your account</p>
+              <h2>Join CityWide Rental as a renter, owner, or both.</h2>
+              <p>
+                A single profile can unlock listing, booking, secure payments,
+                and trust tools in one place.
               </p>
-            </div>
-          </form>
+
+              <div class="registration-highlights">
+                <div>
+                  <strong>01</strong>
+                  <span>Choose the roles that match your activity</span>
+                </div>
+                <div>
+                  <strong>02</strong>
+                  <span>Fill in your details in one streamlined form</span>
+                </div>
+                <div>
+                  <strong>03</strong>
+                  <span>Start renting or listing immediately after signup</span>
+                </div>
+              </div>
+            </aside>
+
+            <form class="contact-form-card registration-card">
+              <div class="contact-form-grid">
+                <div class="form-field">
+                  <label for="reg-name" class="form-label">Full name</label>
+                  <input
+                    id="reg-name"
+                    name="reg-name"
+                    type="text"
+                    class="form-input"
+                    placeholder="Obse Taresa"
+                    required
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label for="reg-email" class="form-label">Email</label>
+                  <input
+                    id="reg-email"
+                    name="reg-email"
+                    type="email"
+                    class="form-input"
+                    placeholder="obse@example.com"
+                    required
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label for="reg-city" class="form-label">City</label>
+                  <input
+                    id="reg-city"
+                    name="reg-city"
+                    type="text"
+                    class="form-input"
+                    placeholder="Nekemte"
+                    required
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label for="reg-phone" class="form-label">Phone</label>
+                  <input
+                    id="reg-phone"
+                    name="reg-phone"
+                    type="tel"
+                    class="form-input"
+                    placeholder="(+251) 123-4567"
+                  />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label class="form-label">Choose your account role</label>
+                <div class="role-options">
+                  <label class="role-card">
+                    <input type="checkbox" name="roles" value="lessee" />
+                    <span class="role-card-content">
+                      <strong>Lessee</strong>
+                      <span>I want to rent items from neighbors.</span>
+                    </span>
+                  </label>
+
+                  <label class="role-card">
+                    <input type="checkbox" name="roles" value="lessor" />
+                    <span class="role-card-content">
+                      <strong>Lessor</strong>
+                      <span>I want to list items for others to rent.</span>
+                    </span>
+                  </label>
+
+                  <label class="role-card">
+                    <input type="checkbox" name="roles" value="both" />
+                    <span class="role-card-content">
+                      <strong>Both</strong>
+                      <span>I want to rent and list from one account.</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="contact-form-grid">
+                <div class="form-field">
+                  <label for="reg-password" class="form-label">Password</label>
+                  <input
+                    id="reg-password"
+                    name="reg-password"
+                    type="password"
+                    class="form-input"
+                    placeholder="Create a password"
+                    required
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label for="reg-confirm-password" class="form-label"
+                    >Confirm password</label
+                  >
+                  <input
+                    id="reg-confirm-password"
+                    name="reg-confirm-password"
+                    type="password"
+                    class="form-input"
+                    placeholder="Confirm your password"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                  Create account
+                </button>
+                <p class="form-note"></p>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </main>
