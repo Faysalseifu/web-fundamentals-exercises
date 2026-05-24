@@ -1,5 +1,5 @@
 /* ============================================================
-   DAY 1 — Citywide Ethiopia
+   DAY 1 and Day 2 — Citywide Ethiopia
    Section 1: Semantic HTML5 landmarks
    Section 2: CSS3 Box Model (border-box + padding/margin/border)
    Section 3: Custom CSS Properties (:root variables)
@@ -126,8 +126,8 @@ h3 {
   gap: var(--space-gutter);
   width: 100%;
   height: var(--header-h);
-  padding-left: var(--space-mobile);
-  padding-right: var(--space-mobile);
+  padding-left: var(--space-desktop);
+  padding-right: var(--space-desktop);
   background-color: rgba(249, 249, 249, 0.78);
   border-bottom: 1px solid rgba(197, 197, 211, 0.3);
   backdrop-filter: blur(16px);
@@ -259,8 +259,8 @@ main {
 
 main > section,
 main > aside.mobile-nav {
-  padding-left: var(--space-mobile);
-  padding-right: var(--space-mobile);
+  padding-left: var(--space-desktop);
+  padding-right: var(--space-desktop);
 }
 
 /* ── Section headers ── */
@@ -336,7 +336,7 @@ main > aside.mobile-nav {
   text-align: center;
   overflow: hidden;
   background-color: #eef1f6;
-  background-image: url("images/addis-skyline.jpg");
+  background-image: url("./images/addis-skyline.jpg");
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -418,7 +418,9 @@ main > aside.mobile-nav {
 /* Glass search bar (visual only — form in next step) */
 .hero-search {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
   gap: var(--space-base);
   width: 100%;
   max-width: calc(var(--max-width) * 0.72);
@@ -432,13 +434,18 @@ main > aside.mobile-nav {
 }
 
 .search-field {
-  flex: 1 1 auto;
+  flex: 1 1 calc(40% - var(--space-base));
   padding: calc(var(--space-base) + 4px) calc(var(--space-base) * 2);
   font-size: 15px;
   color: var(--outline-variant);
   text-align: left;
   background-color: transparent;
   border-radius: var(--radius-sm);
+  border-right: 1px solid var(--border-subtle);
+}
+
+.search-field--location {
+  border-right: none;
 }
 
 .search-field--item::before {
@@ -450,6 +457,8 @@ main > aside.mobile-nav {
 }
 
 .search-submit {
+  flex: 0 0 auto;
+  min-width: calc(var(--space-base) * 16);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -767,7 +776,7 @@ main > aside.mobile-nav {
 
 .item-card {
   display: flex;
-  flex: 1 1 calc(50% - var(--space-gutter));
+  flex: 1 1 calc(25% - var(--space-gutter));
   flex-direction: column;
   min-width: calc(var(--space-base) * 28);
   overflow: hidden;
@@ -951,7 +960,7 @@ main > aside.mobile-nav {
 }
 
 .step-card {
-  flex: 1 1 100%;
+  flex: 1 1 calc(33.333% - var(--space-gutter));
   padding: calc(var(--space-base) * 3);
   text-align: center;
   color: var(--on-primary);
@@ -1141,13 +1150,15 @@ main > aside.mobile-nav {
    ============================================================ */
 .cta-section {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: calc(var(--space-base) * 3);
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(var(--space-base) * 4);
   width: calc(100% - var(--space-desktop) * 2);
   max-width: 900px;
   margin: calc(var(--space-base) * 3) auto;
-  padding: calc(var(--space-base) * 5) calc(var(--space-base) * 5);
+  padding: calc(var(--space-base) * 5) calc(var(--space-base) * 6);
   background-color: var(--surface-white);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xl);
@@ -1236,7 +1247,8 @@ main > aside.mobile-nav {
 
 .listing-panel {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: stretch;
   overflow: hidden;
   background-color: var(--surface-white);
   border: 1px solid var(--border-subtle);
@@ -1557,7 +1569,7 @@ main > aside.mobile-nav {
   max-width: var(--max-width);
   margin-left: auto;
   margin-right: auto;
-  padding: calc(var(--space-base) * 8) var(--space-mobile)
+  padding: calc(var(--space-base) * 8) var(--space-desktop)
     calc(var(--space-base) * 6);
 }
 
@@ -1707,7 +1719,7 @@ main > aside.mobile-nav {
 }
 
 .hood-card {
-  flex: 1 1 calc(50% - var(--space-gutter));
+  flex: 1 1 calc(20% - var(--space-gutter));
   min-width: calc(var(--space-base) * 22);
   padding: calc(var(--space-base) * 3);
   text-align: center;
@@ -1768,175 +1780,3 @@ main > aside.mobile-nav {
     background-color var(--ease);
 }
 
-/* ============================================================
-   RESPONSIVE — flexbox + calc()
-   ============================================================ */
-@media (min-width: 600px) {
-  .hero-search {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: var(--space-base);
-  }
-
-  .search-field {
-    flex: 1 1 calc(40% - var(--space-base));
-    border-right: 1px solid var(--border-subtle);
-  }
-
-  .search-field--location {
-    border-right: none;
-  }
-
-  .search-submit {
-    flex: 0 0 auto;
-    min-width: calc(var(--space-base) * 16);
-  }
-}
-
-@media (min-width: 768px) {
-  .site-header {
-    padding-left: var(--space-desktop);
-    padding-right: var(--space-desktop);
-  }
-
-  main > section,
-  main > aside.mobile-nav {
-    padding-left: var(--space-desktop);
-    padding-right: var(--space-desktop);
-  }
-
-  .trust-section {
-    padding-left: var(--space-desktop);
-    padding-right: var(--space-desktop);
-  }
-
-  .steps-section {
-    padding-left: var(--space-desktop);
-    padding-right: var(--space-desktop);
-  }
-
-  .footer-top {
-    padding-left: var(--space-desktop);
-    padding-right: var(--space-desktop);
-  }
-
-  .category-card {
-    flex: 1 1 calc(25% - var(--space-gutter));
-    min-width: 0;
-  }
-
-  .item-card {
-    flex: 1 1 calc(25% - var(--space-gutter));
-  }
-
-  .footer-top {
-    align-items: flex-start;
-  }
-
-  .footer-nav {
-    flex: 1 1 auto;
-    justify-content: space-between;
-  }
-
-  .footer-meta {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .hood-card {
-    flex: 1 1 calc(20% - var(--space-gutter));
-  }
-
-  .step-card {
-    flex: 1 1 calc(33.333% - var(--space-gutter));
-    width: auto;
-  }
-
-  .cta-section {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: calc(var(--space-base) * 4);
-    width: calc(100% - var(--space-desktop) * 2);
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: calc(var(--space-base) * 5) calc(var(--space-base) * 6);
-  }
-
-  .cta-left {
-    flex: 1 1 55%;
-    max-width: none;
-    padding-right: 0;
-  }
-
-  .cta-visual {
-    flex: 0 0 auto;
-    justify-content: center;
-    padding-left: 0;
-  }
-
-  .cta-phone {
-    width: min(160px, 20vw);
-  }
-
-  .listing-section {
-    width: calc(100% - var(--space-desktop) * 2);
-    max-width: 860px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .listing-panel {
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-  .listing-card--form {
-    border-top: none;
-    border-right: 1px solid var(--border-subtle);
-    border-left: none;
-    border-bottom: none;
-  }
-
-  .listing-card {
-    min-height: 100%;
-  }
-}
-
-@media (max-width: 767px) {
-  .primary-nav {
-    display: none;
-  }
-
-  .header-cta {
-    font-size: 12px;
-    padding: 8px calc(var(--space-base) * 2);
-  }
-
-  body {
-    padding-bottom: calc(var(--space-base) * 10);
-  }
-
-  .section-header--row .popular-nav {
-    flex: 1 1 100%;
-  }
-
-  .mobile-nav {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 150;
-    display: block;
-    padding: calc(var(--space-base) * 2) var(--space-mobile);
-    background-color: rgba(249, 249, 249, 0.92);
-    border-top: 1px solid var(--outline-variant);
-    backdrop-filter: blur(14px);
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
-  }
-}
