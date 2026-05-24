@@ -17,7 +17,7 @@
           <a href="#features">Features</a>
           <a href="#how-it-works">How it works</a>
           <a href="#security">Security</a>
-          <a href="#contact">Contact</a>
+          <a href="#contact-form">Contact</a>
         </nav>
       </div>
     </header>
@@ -37,7 +37,7 @@
               nearby, schedule confidently, and transact safely.
             </p>
             <div class="hero-actions">
-              <a href="#contact" class="btn btn-primary">Request a demo</a>
+              <a href="#contact-form" class="btn btn-primary">Request a demo</a>
               <a href="#features" class="btn btn-secondary">Explore platform</a>
             </div>
             <div class="hero-metrics">
@@ -207,6 +207,97 @@
           <a href="mailto:hello@citywiderental.example" class="btn btn-primary"
             >Contact the team</a
           >
+        </div>
+      </section>
+
+      <section class="contact-form-section" id="contact-form">
+        <div class="container">
+          <div class="section-intro">
+            <p class="eyebrow">Request a demo</p>
+            <h2>Tell us what you want to rent or list.</h2>
+            <p>
+              Share a few details and we’ll help shape the next step for your
+              neighborhood rental experience.
+            </p>
+          </div>
+
+          <form class="contact-form-card">
+            <div class="contact-form-grid">
+              <div class="form-field">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  class="form-input"
+                  placeholder="Jordan Lee"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  class="form-input"
+                  placeholder="jordan@example.com"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="city" class="form-label">City</label>
+                <input
+                  id="city"
+                  name="city"
+                  type="text"
+                  class="form-input"
+                  placeholder="New York"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="interest" class="form-label"
+                  >I’m interested in</label
+                >
+                <select
+                  id="interest"
+                  name="interest"
+                  class="form-input"
+                  required
+                >
+                  <option value="">Select an option</option>
+                  <option value="listing">Listing an item</option>
+                  <option value="renting">Renting an item</option>
+                  <option value="partnership">Partnership or demo</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-input form-textarea"
+                placeholder="Tell us what you want to build or rent."
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">
+                Send inquiry
+              </button>
+              <p class="form-note">
+                This form is ready for your next backend or email integration.
+              </p>
+            </div>
+          </form>
         </div>
       </section>
     </main>

@@ -314,6 +314,73 @@ img {
   }
 }
 
+.contact-form-section {
+  padding: 1rem 0 4rem;
+}
+
+.contact-form-card {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.form-input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  padding: 0.9rem 1rem;
+  font: inherit;
+}
+
+.form-input::placeholder {
+  color: #98b8e0;
+}
+
+.form-input:focus {
+  outline: 2px solid rgba(79, 209, 197, 0.4);
+  border-color: rgba(79, 209, 197, 0.75);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.form-note {
+  color: var(--muted);
+  margin: 0;
+}
+
 @media (max-width: 640px) {
   .hero {
     padding-top: 3rem;
@@ -326,5 +393,9 @@ img {
 
   .site-nav {
     gap: 0.75rem;
+  }
+
+  .contact-form-grid {
+    grid-template-columns: 1fr;
   }
 }
