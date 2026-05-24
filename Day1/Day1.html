@@ -1,81 +1,1139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML5 Semantic Elements</title>
-    <link rel="stylesheet" href="style.css">
-     
-</head>
-<body>
-
-    <!-- 
-      <header> : Encloses contextually isolated introductory layout elements, site branding graphics, metadata logs, or global identity components. 
-    -->
-    <header>
-        <h1 style="color: blue; text-align: center;">Website Branding & Title</h1>
-        <p>Your introductory tagline goes here.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Citywide Ethiopia — Rent Anything Nearby in Addis Ababa</title>
+    <meta
+      name="description"
+      content="Ethiopia's trusted peer-to-peer rental marketplace. Borrow tools, event gear, cameras, and tech from verified neighbours across Addis Ababa."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="#home" class="logo"
+        >Citywide <span class="logo-accent">Ethiopia</span></a
+      >
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#browse" class="is-active">Browse</a></li>
+          <li><a href="#neighborhoods">Areas</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact" class="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#lend" class="header-cta">List an Item</a>
     </header>
 
-    <!-- 
-      <nav> : Strictly reserved for blocks containing major internal or external site-wide navigation links.
-    -->
-    <nav>
-        <!-- <h2>Main Navigation</h2> -->
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- 
-      <main> : Contains the singular, dominant core content unique to that specific webpage document. 
-      It must not feature repetitive cross-page elements like sidebars or global headers.
-    -->
     <main>
-        
-        <!-- 
-          <section> : Represents a generalized thematic grouping of relevant related assets, 
-          typically initialized with an explicit structural title heading (h1-h6).
-        -->
-        <section>
-            <h2>Thematic Grouping: Blog Posts</h2>
-            
-            <!-- 
-              <article> : Defines a completely independent, modular, self-contained layout block 
-              designed to be cleanly extracted and syndicated across distinct applications.
-            -->
-            <article>
-                <h3>Independent Blog Post Title</h3>
-                <p>This content is entirely self-contained. It makes sense even if extracted and put on another website or RSS feed.</p>
-            </article>
-
-            <article>
-                <h3>Another E-commerce Product Entry</h3>
-                <p>Product Details: This is another standalone block of content with its own distinct layout.</p>
-            </article>
-        </section>
-
-        <!-- 
-          <aside> : Wraps tangential, auxiliary data or sidebars that are peripherally related 
-          to the surrounding primary material.
-        -->
-        <aside>
-            <h3>Peripherally Related Info</h3>
-            <p>Here is a contextual tip, a promotional banner, or tangential data relevant to the surrounding context.</p>
+      <section
+        id="home"
+        class="hero"
+        aria-label="Rent anything nearby in Addis Ababa"
+      >
+        <header class="hero-header">
+          <p class="hero-eyebrow">
+            🇪🇹 Trusted across Addis Ababa · 2,400+ local listings
+          </p>
+          <h1>Rent Anything Nearby</h1>
+          <p class="hero-lead">
+            <strong>Sound systems, generators, cameras, and tools</strong> —
+            from trusted neighbours in Bole, Kazanchis, Piassa, and more. Pay in
+            <strong>ETB</strong>. Safe escrow on every booking.
+          </p>
+        </header>
+        <aside class="hero-search" aria-label="Search items and location">
+          <p class="search-field search-field--item">
+            What do you need? e.g. wedding tent, drill…
+          </p>
+          <p class="search-field search-field--location">
+            Where in Addis? Bole, CMC, Sarbet…
+          </p>
+          <a href="#browse" class="search-submit">Search</a>
         </aside>
+        <nav class="hero-tags" aria-label="Popular searches in Ethiopia">
+          <span>Popular in Addis:</span>
+          <a href="#browse">Sound Systems</a>
+          <a href="#browse">Generators</a>
+          <a href="#browse">Wedding Tents</a>
+          <a href="#browse">Power Tools</a>
+        </nav>
+        <aside class="hero-stats" aria-label="Platform statistics">
+          <p><strong>2,400+</strong><span>Items in Addis</span></p>
+          <p><strong>4.9★</strong><span>Community rating</span></p>
+          <p><strong>0 ETB</strong><span>Listing fees</span></p>
+          <p><strong>24h</strong><span>Avg. response</span></p>
+        </aside>
+      </section>
 
+      <section id="browse" class="categories-section">
+        <header class="section-header">
+          <p class="section-label">Explore</p>
+          <h2>Featured Categories</h2>
+          <p class="section-lead">
+            High-quality gear from your neighbourhood — same-day pickup across
+            Addis Ababa.
+          </p>
+        </header>
+        <article class="category-card">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5VlF8f7gClcfSovNsKZi3awydGyFoqtT90MNphHolpb0kd_5b7AIQ2_fdSSlsSpwPiqeA-uzVmA-rsi3uAUzlJfJLf5e1CXSPDPyReQm8h3U-2ZxnolH6y9As5NaBPC6Rhqw1x_PttP5sH73v0ahWp6tvi8nD_NWx0gnEHwrK5ydNG90H39Dafn-jyfKcJXGl2QSyD9rPGtg6bmekd3kTWH6KbXK86J3pgOMl0ZtQxs13RUrSyFsu7QXy-oXyMYOVxzngBNKcT64"
+            alt="Construction and power tools"
+          />
+          <header><h3>Construction &amp; Tools</h3></header>
+        </article>
+        <article class="category-card">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAst5TaAIrFSE7ABatP6qF9DrOE1Fl28Fqssw7H7zFMsXLiupKuCd3AykzW-8QO1FyLjXHep_fZ_rqTIUIFnZ7HN4BzJw7VMaGiuH_0iHB0yTnkmKVtkmMh6KlHiRxBHtczNBIuPz8MHuILR9wGYPNkSHTfAZL2Q5b4LuI_qi8p8CRjLglfOMzynngIp2PcLV8HjDe--vwjYWtbQW-DWSDjbPR7H8MvfKWQsFDVIkHwB7FRroYWZGjKjFFzVwYdz0wtHpxRXD47fYg"
+            alt="Wedding and event equipment"
+          />
+          <header><h3>Events &amp; Weddings</h3></header>
+        </article>
+        <article class="category-card">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0Ji-ffn8Yfx9a9SD2Owknnc_PaWvD4iiXnODBvyVxbvPyCHFolRXOsNN65Xjwb0SXvZFAKkWi5fZQYWHv7P90YzhQZZYMAMKg89H78kYXzFP2AMeY25PrR77vrb9bqDePomRNEMgoYJRTNh8CS3xfbFySVG9UoQ_uU_-xxwjZiQZtGgsw2xTkLbY6FJ78FzX2JFSkVon5Hq1moYfIWAX0JSzUkH7a6AEEcnSGgtOnwkvwEgWnhnWuX107mk64dXLVQdrX0tnDMhI"
+            alt="Cameras and photography gear"
+          />
+          <header><h3>Cameras &amp; Media</h3></header>
+        </article>
+        <article class="category-card">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBws0-Xj5k60RXI-tHPAI1-GPIySzTjL8OUxnXb6NcYtaQKGWgt47jQMUxxt2e9KJi_0J5VUrrQ9i5ky0LDclNfZKUqz9eKaz5sdLxbv5hOFQpfJ1Xrp9XzHzqQDCW1kKedI0hEWOh3-938AVTnU3V5serlhpKBjdR0W7P56D_wlLU6LPvOmMmOya0rYzp6hWiWms9VScvjqnJBbpLInuHYfWF8fwXmuQEI_efkX1WyB6Msfh2FKrifFQRJfbgBKnRIY-aYfqlyVc4"
+            alt="Generators and electronics"
+          />
+          <header><h3>Generators &amp; Tech</h3></header>
+        </article>
+      </section>
+
+      <section id="neighborhoods" class="neighborhoods-section">
+        <header class="section-header">
+          <p class="section-label">Addis Ababa</p>
+          <h2>Rent by Neighbourhood</h2>
+          <p class="section-lead">
+            Find items close to you — from Mercato to Bole Atlas.
+          </p>
+        </header>
+        <article class="hood-card">
+          <h3>Bole</h3>
+          <p>680 listings</p>
+          <aside>850 – 4,200 ETB/day</aside>
+        </article>
+        <article class="hood-card">
+          <h3>Kazanchis</h3>
+          <p>420 listings</p>
+          <aside>600 – 3,100 ETB/day</aside>
+        </article>
+        <article class="hood-card">
+          <h3>Piassa</h3>
+          <p>310 listings</p>
+          <aside>450 – 2,400 ETB/day</aside>
+        </article>
+        <article class="hood-card">
+          <h3>CMC / Sarbet</h3>
+          <p>540 listings</p>
+          <aside>500 – 2,800 ETB/day</aside>
+        </article>
+        <article class="hood-card">
+          <h3>Mercato</h3>
+          <p>290 listings</p>
+          <aside>350 – 1,900 ETB/day</aside>
+        </article>
+      </section>
+
+      <section id="trust" class="trust-section">
+        <header class="section-header">
+          <p class="section-label">Secure Marketplace</p>
+          <h2>Rent with Peace of Mind</h2>
+          <p class="section-lead section-lead--trust">
+            Built for Ethiopia — escrow protection, verified lenders, and
+            support in Amharic &amp; English.
+          </p>
+        </header>
+        <article class="trust-feature trust-feature--escrow">
+          <h3>Secure Escrow (ETB)</h3>
+          <p>
+            Payments stay protected until you confirm the item is exactly as
+            described.
+          </p>
+        </article>
+        <article class="trust-feature trust-feature--shield">
+          <h3>Local Lender Protection</h3>
+          <p>
+            Coverage for damage or theft — designed for high-value event and
+            construction gear.
+          </p>
+        </article>
+        <article class="trust-feature trust-feature--verified">
+          <h3>Verified Community</h3>
+          <p>
+            ID-verified lenders and renters across Addis Ababa — trust you can
+            see before you book.
+          </p>
+        </article>
+        <article class="trust-feature trust-feature--support">
+          <h3>24/7 Local Support</h3>
+          <p>
+            Help in Amharic and English when you need it — before, during, and
+            after every rental.
+          </p>
+        </article>
+      </section>
+
+      <section id="popular" class="popular-section">
+        <header class="section-header section-header--row">
+          <section>
+            <p class="section-label">Trending in Addis</p>
+            <h2>Popular Nearby</h2>
+            <p class="section-lead">
+              Highly-rated items ready for pickup today.
+            </p>
+          </section>
+          <nav class="popular-nav" aria-label="Browse more items">
+            <a href="#browse">View all items →</a>
+          </nav>
+        </header>
+
+        <article class="item-card">
+          <header class="item-media">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAst5TaAIrFSE7ABatP6qF9DrOE1Fl28Fqssw7H7zFMsXLiupKuCd3AykzW-8QO1FyLjXHep_fZ_rqTIUIFnZ7HN4BzJw7VMaGiuH_0iHB0yTnkmKVtkmMh6KlHiRxBHtczNBIuPz8MHuILR9wGYPNkSHTfAZL2Q5b4LuI_qi8p8CRjLglfOMzynngIp2PcLV8HjDe--vwjYWtbQW-DWSDjbPR7H8MvfKWQsFDVIkHwB7FRroYWZGjKjFFzVwYdz0wtHpxRXD47fYg"
+              alt="Large wedding tent setup"
+            />
+            <p class="item-price">3,500 <span>ETB/day</span></p>
+          </header>
+          <header class="item-info">
+            <span class="badge">Popular</span>
+            <h3>Premium Wedding Tent Set</h3>
+            <p class="item-rating">★ 4.9</p>
+          </header>
+          <p class="item-location">Bole · 1.2 km away · Available today</p>
+          <footer>
+            <a href="#popular" class="btn-primary">View Details</a>
+          </footer>
+        </article>
+
+        <article class="item-card">
+          <header class="item-media">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDFmQy0ZvCh7e-f8tk313j7DHLdNEdtW-elcAMW0FebgnzgSM9Rf8I7dN3asm7LDS2EJQB5eGEkAJsrJabv-3Jvb7F-JG9hxFf52KUkJV7ZBBUzeR0nCzaa1TqngrIEp4WhRgo5tkhI9vHJcXT9F_rQTwFqi9w1gE1eBy-5QEapOlsmW6iiiy_O2tVcPqDxhfd6-ubapLqBZQVxWzlTXq8C47Hci29-gbWgN6yfM-gbcFj1fTlG6j_Q9ebQuEtgVrX5D2L8Doye74"
+              alt="Portable generator"
+            />
+            <p class="item-price">1,200 <span>ETB/day</span></p>
+          </header>
+          <header class="item-info">
+            <h3>5kVA Backup Generator</h3>
+            <p class="item-rating">★ 4.8</p>
+          </header>
+          <p class="item-location">Kazanchis · 0.6 km away · Available today</p>
+          <footer>
+            <a href="#popular" class="btn-primary">View Details</a>
+          </footer>
+        </article>
+
+        <article class="item-card">
+          <header class="item-media">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxrnBgrM-xkwtnfVvDoJ6oZAPZ0qU8wVvSo4SvdZo138rFixqOTvXeqqR7m5fBFG3Ls40RC24dZfqVE8n2lM2UtLS9OUjSX1M1YSt-fW_BrHnFoP8I1ToJQXSt42MoZcg7VJQvd4VoFhAwsdmSlcp9xVawv-M278hzxs2isJQbd1PXLDebEavr9ye2mvouk1_eQLvMxBj-mRSMAu7opV2aiaQ8ifqMwjRT7-EKyIcm5kCIV9AXLjHDsL19xOOD5UNAll4iiZz76tQ"
+              alt="PA sound system"
+            />
+            <p class="item-price">2,800 <span>ETB/day</span></p>
+          </header>
+          <header class="item-info">
+            <span class="badge badge--new">New</span>
+            <h3>PA Sound System + Mics</h3>
+            <p class="item-rating">★ 5.0</p>
+          </header>
+          <p class="item-location">CMC · 2.1 km away · Available today</p>
+          <footer>
+            <a href="#popular" class="btn-primary">View Details</a>
+          </footer>
+        </article>
+
+        <article class="item-card">
+          <header class="item-media">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqAeRwUo-qfMV5FpqZza1fKKk4JqdbNdKfgqJp5irTbd04DFHAo0zmc-0wrT85Le0L8Qs9SKUAB1r7KC_klkgS82eOxDRUv8o7WWT33qT3-1zZ9dRM2eNiPO437RUVV4MpzKMhfEt-Xy4RIrPV5hjngYKWdFmGTUcXUWtA51uGuBfnroSJ75FZHnEhqZhA6RiiC0CRQZ11RbT3tOl19D8wE5apMFaBtFt2zIkmJ8--axFV2OwSK0_7lgpL2OCiBgsxcUFQcX5bhns"
+              alt="Rotary hammer drill"
+            />
+            <p class="item-price">450 <span>ETB/day</span></p>
+          </header>
+          <header class="item-info">
+            <h3>Rotary Hammer Drill</h3>
+            <p class="item-rating">★ 4.7</p>
+          </header>
+          <p class="item-location">Mercato · 3.4 km away · Available today</p>
+          <footer>
+            <a href="#popular" class="btn-primary">View Details</a>
+          </footer>
+        </article>
+      </section>
+
+      <section id="testimonials" class="testimonials-section">
+        <header class="section-header">
+          <p class="section-label">Testimonials</p>
+          <h2>What Our Community Says</h2>
+          <p class="section-lead">
+            Real stories from renters and lenders across Addis Ababa.
+          </p>
+        </header>
+        <section
+          class="testimonial-carousel"
+          aria-label="Scrolling testimonials"
+        >
+          <section class="testimonial-track">
+            <article class="testimonial-card testimonial-card--renter">
+              <p class="testimonial-stars" aria-hidden="true">★★★★★</p>
+              <p class="testimonial-quote">
+                "Rented a wedding tent in Bole — smooth handoff, fair price in
+                ETB. Will use again."
+              </p>
+              <footer><strong>Hanna T.</strong> · Renter, Bole</footer>
+            </article>
+            <article class="testimonial-card testimonial-card--lender">
+              <p class="testimonial-stars" aria-hidden="true">★★★★★</p>
+              <p class="testimonial-quote">
+                "Listed my generator and earned extra income. Escrow made me
+                feel safe."
+              </p>
+              <footer><strong>Dawit K.</strong> · Lender, Kazanchis</footer>
+            </article>
+            <article class="testimonial-card testimonial-card--renter">
+              <p class="testimonial-stars" aria-hidden="true">★★★★★</p>
+              <p class="testimonial-quote">
+                "Found a PA system same day for our church event. Better than
+                buying new."
+              </p>
+              <footer><strong>Meron A.</strong> · Renter, CMC</footer>
+            </article>
+            <article class="testimonial-card testimonial-card--lender">
+              <p class="testimonial-stars" aria-hidden="true">★★★★★</p>
+              <p class="testimonial-quote">
+                "Verified profiles and quick support in Amharic — exactly what
+                Addis needed."
+              </p>
+              <footer><strong>Yonas M.</strong> · Lender, Piassa</footer>
+            </article>
+            <article
+              class="testimonial-card testimonial-card--renter"
+              aria-hidden="true"
+            >
+              <p class="testimonial-stars" aria-hidden="true">★★★★★</p>
+              <p class="testimonial-quote">
+                "Rented a wedding tent in Bole — smooth handoff, fair price in
+                ETB. Will use again."
+              </p>
+              <footer><strong>Hanna T.</strong> · Renter, Bole</footer>
+            </article>
+            <article
+              class="testimonial-card testimonial-card--lender"
+              aria-hidden="true"
+            >
+              <p class="testimonial-stars" aria-hidden="true">★★★★★</p>
+              <p class="testimonial-quote">
+                "Listed my generator and earned extra income. Escrow made me
+                feel safe."
+              </p>
+              <footer><strong>Dawit K.</strong> · Lender, Kazanchis</footer>
+            </article>
+            <article
+              class="testimonial-card testimonial-card--renter"
+              aria-hidden="true"
+            >
+              <p class="testimonial-stars" aria-hidden="true">★★★★★</p>
+              <p class="testimonial-quote">
+                "Found a PA system same day for our church event. Better than
+                buying new."
+              </p>
+              <footer><strong>Meron A.</strong> · Renter, CMC</footer>
+            </article>
+            <article
+              class="testimonial-card testimonial-card--lender"
+              aria-hidden="true"
+            >
+              <p class="testimonial-stars" aria-hidden="true">★★★★★</p>
+              <p class="testimonial-quote">
+                "Verified profiles and quick support in Amharic — exactly what
+                Addis needed."
+              </p>
+              <footer><strong>Yonas M.</strong> · Lender, Piassa</footer>
+            </article>
+          </section>
+        </section>
+      </section>
+
+      <section id="how-it-works" class="steps-section">
+        <header class="section-header section-header--light">
+          <h2>Start Renting in 3 Simple Steps</h2>
+          <p class="section-lead">
+            From browse to return — designed for busy life in Addis.
+          </p>
+        </header>
+        <article class="step-card">
+          <p class="step-number">1</p>
+          <p class="step-icon" aria-hidden="true">🔍</p>
+          <h3>Find What You Need</h3>
+          <p>
+            Browse gear listed by verified locals in your area — filter by
+            neighbourhood and price in ETB.
+          </p>
+        </article>
+        <article class="step-card">
+          <p class="step-number">2</p>
+          <p class="step-icon" aria-hidden="true">💳</p>
+          <h3>Book &amp; Pay Securely</h3>
+          <p>
+            Pay through escrow in birr. Meet nearby for pickup — no middleman.
+          </p>
+        </article>
+        <article class="step-card">
+          <p class="step-number">3</p>
+          <p class="step-icon" aria-hidden="true">↩️</p>
+          <h3>Return &amp; Review</h3>
+          <p>
+            Return the item and leave a review. Help the community stay trusted.
+          </p>
+        </article>
+      </section>
+
+      <section id="lend" class="cta-section">
+        <section class="cta-left">
+          <header class="section-header section-header--cta">
+            <p class="section-label">Earn in ETB</p>
+            <h2>List Your Gear in Addis</h2>
+            <p class="section-lead">
+              Turn idle tools, event gear, and tech into income — free to list,
+              verified renters only.
+            </p>
+          </header>
+          <nav class="cta-links" aria-label="Get started">
+            <a href="#contact">Start Listing — Free</a>
+            <a href="#browse">Browse Items</a>
+          </nav>
+        </section>
+        <aside class="cta-visual" aria-label="Citywide mobile app">
+          <figure class="cta-phone-wrap">
+            <svg
+              class="cta-phone"
+              viewBox="0 0 260 520"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <defs>
+                <linearGradient id="bodyGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#1a2a5e" />
+                  <stop offset="50%" stop-color="#0d1a3a" />
+                  <stop offset="100%" stop-color="#060e22" />
+                </linearGradient>
+                <linearGradient id="sideLeft" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#2a3d7a" />
+                  <stop offset="100%" stop-color="#0d1a3a" />
+                </linearGradient>
+                <linearGradient id="sideRight" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#0d1a3a" />
+                  <stop offset="100%" stop-color="#050c1e" />
+                </linearGradient>
+                <linearGradient id="screenGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#eef2ff" />
+                  <stop offset="100%" stop-color="#f8f9ff" />
+                </linearGradient>
+                <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#00236f" />
+                  <stop offset="100%" stop-color="#1e3a8a" />
+                </linearGradient>
+                <linearGradient id="btnGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#078930" />
+                  <stop offset="100%" stop-color="#06a838" />
+                </linearGradient>
+                <linearGradient id="card1Grad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#dce1ff" />
+                  <stop offset="100%" stop-color="#c5cfff" />
+                </linearGradient>
+                <linearGradient id="card2Grad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#d1fae5" />
+                  <stop offset="100%" stop-color="#a7f3d0" />
+                </linearGradient>
+                <linearGradient id="shineGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="white" stop-opacity="0.12" />
+                  <stop offset="100%" stop-color="white" stop-opacity="0" />
+                </linearGradient>
+                <filter id="shadow" x="-20%" y="-5%" width="160%" height="130%">
+                  <feDropShadow
+                    dx="0"
+                    dy="18"
+                    stdDeviation="22"
+                    flood-color="#00123a"
+                    flood-opacity="0.55"
+                  />
+                </filter>
+                <filter id="softShadow">
+                  <feDropShadow
+                    dx="0"
+                    dy="4"
+                    stdDeviation="6"
+                    flood-color="#00236f"
+                    flood-opacity="0.2"
+                  />
+                </filter>
+                <clipPath id="screenClip">
+                  <rect x="22" y="18" width="216" height="468" rx="20" />
+                </clipPath>
+              </defs>
+
+              <!-- Drop shadow -->
+              <ellipse
+                cx="130"
+                cy="510"
+                rx="90"
+                ry="10"
+                fill="#00123a"
+                fill-opacity="0.3"
+              />
+
+              <!-- Phone body -->
+              <rect
+                x="4"
+                y="4"
+                width="252"
+                height="510"
+                rx="38"
+                fill="url(#bodyGrad)"
+                filter="url(#shadow)"
+              />
+
+              <!-- Side sheen left -->
+              <rect
+                x="4"
+                y="60"
+                width="6"
+                height="100"
+                rx="3"
+                fill="url(#sideLeft)"
+                opacity="0.6"
+              />
+              <!-- Side sheen right -->
+              <rect
+                x="250"
+                y="60"
+                width="6"
+                height="100"
+                rx="3"
+                fill="url(#sideRight)"
+                opacity="0.6"
+              />
+
+              <!-- Screen background -->
+              <rect
+                x="22"
+                y="18"
+                width="216"
+                height="468"
+                rx="20"
+                fill="url(#screenGrad)"
+              />
+
+              <!-- Screen glare -->
+              <rect
+                x="22"
+                y="18"
+                width="216"
+                height="468"
+                rx="20"
+                fill="url(#shineGrad)"
+              />
+
+              <!-- Dynamic island / pill camera -->
+              <rect
+                x="98"
+                y="26"
+                width="64"
+                height="18"
+                rx="9"
+                fill="#0d1a3a"
+              />
+              <circle cx="150" cy="35" r="4" fill="#1a2a5e" />
+              <circle cx="150" cy="35" r="2" fill="#0a1228" />
+              <circle
+                cx="152"
+                cy="33"
+                r="0.7"
+                fill="#4466aa"
+                fill-opacity="0.7"
+              />
+
+              <!-- Status bar -->
+              <text
+                x="34"
+                y="43"
+                font-family="sans-serif"
+                font-size="9"
+                font-weight="700"
+                fill="#1a1c1c"
+              >
+                9:41
+              </text>
+              <rect
+                x="200"
+                y="35"
+                width="24"
+                height="11"
+                rx="3"
+                fill="none"
+                stroke="#444"
+                stroke-width="1.2"
+              />
+              <rect x="224" y="38" width="3" height="5" rx="1" fill="#444" />
+              <rect
+                x="201.5"
+                y="36.5"
+                width="18"
+                height="8"
+                rx="2"
+                fill="#078930"
+              />
+              <rect
+                x="186"
+                y="36"
+                width="12"
+                height="10"
+                rx="2"
+                fill="none"
+                stroke="#444"
+                stroke-width="1"
+              />
+              <rect x="187" y="38" width="7" height="6" rx="1" fill="#444" />
+
+              <!-- App header -->
+              <rect
+                x="22"
+                y="52"
+                width="216"
+                height="50"
+                fill="url(#headerGrad)"
+              />
+              <text
+                x="40"
+                y="80"
+                font-family="sans-serif"
+                font-size="14"
+                font-weight="800"
+                fill="white"
+              >
+                Citywide
+              </text>
+              <text
+                x="114"
+                y="80"
+                font-family="sans-serif"
+                font-size="11"
+                fill="#90a8ff"
+              >
+                Ethiopia
+              </text>
+              <circle cx="218" cy="77" r="12" fill="rgba(255,255,255,0.12)" />
+              <text
+                x="213"
+                y="81"
+                font-family="sans-serif"
+                font-size="12"
+                fill="white"
+              >
+                🔔
+              </text>
+
+              <!-- Search bar -->
+              <rect
+                x="30"
+                y="110"
+                width="200"
+                height="30"
+                rx="15"
+                fill="white"
+                stroke="#dce1ff"
+                stroke-width="1.5"
+              />
+              <text
+                x="50"
+                y="130"
+                font-family="sans-serif"
+                font-size="10"
+                fill="#999"
+              >
+                Search gear in Addis…
+              </text>
+              <circle
+                cx="44"
+                cy="125"
+                r="5"
+                fill="none"
+                stroke="#888"
+                stroke-width="1.5"
+              />
+              <line
+                x1="48"
+                y1="129"
+                x2="51"
+                y2="132"
+                stroke="#888"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+
+              <!-- Category chips -->
+              <rect
+                x="30"
+                y="150"
+                width="52"
+                height="22"
+                rx="11"
+                fill="#00236f"
+              />
+              <text
+                x="40"
+                y="165"
+                font-family="sans-serif"
+                font-size="9"
+                font-weight="600"
+                fill="white"
+              >
+                🔧 Tools
+              </text>
+              <rect
+                x="88"
+                y="150"
+                width="56"
+                height="22"
+                rx="11"
+                fill="#eef2ff"
+                stroke="#b6c4ff"
+                stroke-width="1"
+              />
+              <text
+                x="94"
+                y="165"
+                font-family="sans-serif"
+                font-size="9"
+                font-weight="600"
+                fill="#00236f"
+              >
+                🎶 Sound
+              </text>
+              <rect
+                x="150"
+                y="150"
+                width="56"
+                height="22"
+                rx="11"
+                fill="#eef2ff"
+                stroke="#b6c4ff"
+                stroke-width="1"
+              />
+              <text
+                x="156"
+                y="165"
+                font-family="sans-serif"
+                font-size="9"
+                font-weight="600"
+                fill="#00236f"
+              >
+                📷 Cam
+              </text>
+
+              <!-- Section label -->
+              <text
+                x="30"
+                y="192"
+                font-family="sans-serif"
+                font-size="9"
+                font-weight="700"
+                letter-spacing="1"
+                fill="#006c49"
+              >
+                POPULAR NEARBY
+              </text>
+
+              <!-- Item card 1 -->
+              <rect
+                x="30"
+                y="200"
+                width="200"
+                height="76"
+                rx="14"
+                fill="white"
+                stroke="#e5e7eb"
+                stroke-width="1"
+                filter="url(#softShadow)"
+              />
+              <rect
+                x="30"
+                y="200"
+                width="72"
+                height="76"
+                rx="14"
+                fill="url(#card1Grad)"
+              />
+              <rect
+                x="86"
+                y="200"
+                width="16"
+                height="76"
+                fill="url(#card1Grad)"
+              />
+              <text x="52" y="248" font-family="sans-serif" font-size="28">
+                🎤
+              </text>
+              <text
+                x="110"
+                y="220"
+                font-family="sans-serif"
+                font-size="11"
+                font-weight="700"
+                fill="#1a1c1c"
+              >
+                PA System
+              </text>
+              <text
+                x="110"
+                y="234"
+                font-family="sans-serif"
+                font-size="9"
+                fill="#666"
+              >
+                Bole · ⭐ 4.9
+              </text>
+              <rect
+                x="110"
+                y="244"
+                width="96"
+                height="20"
+                rx="10"
+                fill="url(#headerGrad)"
+              />
+              <text
+                x="126"
+                y="258"
+                font-family="sans-serif"
+                font-size="9"
+                font-weight="700"
+                fill="white"
+              >
+                1,200 ETB / day
+              </text>
+
+              <!-- Item card 2 -->
+              <rect
+                x="30"
+                y="286"
+                width="200"
+                height="76"
+                rx="14"
+                fill="white"
+                stroke="#e5e7eb"
+                stroke-width="1"
+                filter="url(#softShadow)"
+              />
+              <rect
+                x="30"
+                y="286"
+                width="72"
+                height="76"
+                rx="14"
+                fill="url(#card2Grad)"
+              />
+              <rect
+                x="86"
+                y="286"
+                width="16"
+                height="76"
+                fill="url(#card2Grad)"
+              />
+              <text x="52" y="334" font-family="sans-serif" font-size="28">
+                ⚡
+              </text>
+              <text
+                x="110"
+                y="306"
+                font-family="sans-serif"
+                font-size="11"
+                font-weight="700"
+                fill="#1a1c1c"
+              >
+                Generator
+              </text>
+              <text
+                x="110"
+                y="320"
+                font-family="sans-serif"
+                font-size="9"
+                fill="#666"
+              >
+                Piassa · ⭐ 4.8
+              </text>
+              <rect
+                x="110"
+                y="330"
+                width="96"
+                height="20"
+                rx="10"
+                fill="url(#btnGrad)"
+              />
+              <text
+                x="132"
+                y="344"
+                font-family="sans-serif"
+                font-size="9"
+                font-weight="700"
+                fill="white"
+              >
+                800 ETB / day
+              </text>
+
+              <!-- Bottom nav -->
+              <rect
+                x="22"
+                y="460"
+                width="216"
+                height="26"
+                fill="white"
+                opacity="0.95"
+              />
+              <rect x="22" y="460" width="216" height="1" fill="#e5e7eb" />
+              <text x="44" y="478" font-family="sans-serif" font-size="15">
+                🏠
+              </text>
+              <text x="96" y="478" font-family="sans-serif" font-size="15">
+                🔍
+              </text>
+              <text x="148" y="478" font-family="sans-serif" font-size="15">
+                📦
+              </text>
+              <text x="198" y="478" font-family="sans-serif" font-size="15">
+                👤
+              </text>
+              <!-- Active indicator -->
+              <rect
+                x="46"
+                y="484"
+                width="18"
+                height="2"
+                rx="1"
+                fill="#00236f"
+              />
+
+              <!-- Home indicator bar -->
+              <rect x="100" y="498" width="60" height="4" rx="2" fill="#aaa" />
+
+              <!-- Screen edge glare -->
+              <rect
+                x="22"
+                y="18"
+                width="4"
+                height="200"
+                rx="2"
+                fill="white"
+                fill-opacity="0.06"
+              />
+            </svg>
+          </figure>
+        </aside>
+      </section>
+
+      <section
+        id="contact"
+        class="listing-section"
+        aria-labelledby="contact-heading"
+      >
+        <header class="section-header section-header--center">
+          <p class="section-label">Get in touch</p>
+          <h2 id="contact-heading">List or Contact Us</h2>
+          <p class="section-lead">
+            Send a quick listing request — our Addis team replies within 24
+            hours.
+          </p>
+        </header>
+        <section class="listing-panel">
+          <article class="listing-card listing-card--form">
+            <form
+              id="listing-form"
+              class="listing-form"
+              action="#"
+              method="get"
+            >
+              <p class="listing-form-title">List your item — free</p>
+              <label class="listing-field">
+                <span>Your name</span>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="e.g. Hanna"
+                  autocomplete="name"
+                  required
+                />
+              </label>
+              <label class="listing-field">
+                <span>What are you listing?</span>
+                <input
+                  type="text"
+                  name="item"
+                  placeholder="e.g. PA system, drill"
+                  required
+                />
+              </label>
+              <label class="listing-field">
+                <span>Your area</span>
+                <input
+                  type="text"
+                  name="area"
+                  placeholder="Bole, Kazanchis…"
+                  required
+                />
+              </label>
+              <label class="listing-field">
+                <span>Phone number</span>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="09xx xxx xxx"
+                  autocomplete="tel"
+                  required
+                />
+              </label>
+              <button type="submit" class="listing-submit">
+                Send listing →
+              </button>
+            </form>
+          </article>
+          <article class="listing-card listing-card--info">
+            <p class="listing-card-tag">Free listing</p>
+            <h3>Earn from your gear in Addis</h3>
+            <p class="listing-card-lead">
+              Over 2,400 items in Bole, Kazanchis, Piassa, and CMC. Get paid in
+              ETB. Your money stays safe until the rental is done.
+            </p>
+            <ul class="listing-perks">
+              <li>List for free — no fees</li>
+              <li>Verified renters and lenders</li>
+              <li>Safe ETB payments</li>
+              <li>Help in Amharic and English</li>
+            </ul>
+            <p class="listing-card-note">
+              Need help? Email <strong>hello@citywide.et</strong> or message us
+              on Telegram.
+            </p>
+          </article>
+        </section>
+      </section>
+
+      <aside class="mobile-nav" aria-label="Mobile navigation">
+        <nav>
+          <a href="#home" class="is-active">Explore</a>
+          <a href="#browse">Search</a>
+          <a href="#popular">Bookings</a>
+          <a href="#testimonials">Profile</a>
+        </nav>
+      </aside>
     </main>
 
-    <!-- 
-      <footer> : Positioned at the terminal base of a page or internal block, encapsulating 
-      copyright registries, privacy policy references, primary contact addresses, etc.
-    -->
-    <footer>
-        <p>&copy; 2026 Website Footer Content. All Rights Reserved.</p>
-        <p>Contact: admin@domain.com | <a href="#privacy">Privacy Policy</a></p>
+    <footer class="site-footer">
+      <section class="footer-top">
+        <section class="footer-brand">
+          <p class="footer-logo">
+            Citywide <span class="logo-accent">Ethiopia</span>
+          </p>
+          <p class="footer-tagline">
+            Secure peer-to-peer rentals for Addis Ababa and beyond. Borrow and
+            lend with confidence — payments in ETB, verified community members.
+          </p>
+          <nav class="footer-social" aria-label="Social links">
+            <a href="#contact" class="social-icon" aria-label="Facebook">
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              >
+                <path
+                  fill="currentColor"
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+            </a>
+            <a href="#contact" class="social-icon" aria-label="Telegram">
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              >
+                <path
+                  fill="currentColor"
+                  d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+                />
+              </svg>
+            </a>
+            <a href="#contact" class="social-icon" aria-label="Instagram">
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              >
+                <path
+                  fill="currentColor"
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
+                />
+              </svg>
+            </a>
+          </nav>
+        </section>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <section>
+            <h2>Marketplace</h2>
+            <ul>
+              <li><a href="#browse">Browse Items</a></li>
+              <li><a href="#lend">Lend Your Gear</a></li>
+              <li><a href="#trust">Safety &amp; Escrow</a></li>
+              <li><a href="#popular">Popular Nearby</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Addis Ababa</h2>
+            <ul>
+              <li><a href="#neighborhoods">Bole</a></li>
+              <li><a href="#neighborhoods">Kazanchis</a></li>
+              <li><a href="#neighborhoods">Piassa</a></li>
+              <li><a href="#neighborhoods">CMC &amp; Mercato</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Support</h2>
+            <ul>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#trust">Help Center</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </section>
+        </nav>
+        <section class="footer-meta">
+          <p class="footer-copy">
+            &copy; 2026 Citywide Ethiopia. All rights reserved.
+          </p>
+          <nav class="footer-legal" aria-label="Legal links">
+            <a href="#lend">Privacy</a>
+            <a href="#lend">Terms</a>
+            <a href="#trust">Insurance</a>
+          </nav>
+        </section>
+      </section>
     </footer>
-
-</body>
+  </body>
 </html>
