@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="day3.css">
+    <title>Flexibox</title>
+</head>
+<body>
+    <h1>Understanding Flexbox</h1>
+    
+    <h2>1. Basic Flex Container (Current)</h2>
+    <p>Using <code>justify-content: center;</code> and <code>align-items: end;</code></p>
+    <div class="container basic-flex">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+
+    <h2>2. Justify Content (Main Axis Alignment)</h2>
+    <p>Using <code>justify-content: space-between;</code> evenly distributes items along the main axis (horizontal by default).</p>
+    <div class="container space-between">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+
+    <h2>3. Flex Direction & Align Items (Cross Axis)</h2>
+    <p>Using <code>flex-direction: column;</code> changes the main axis to vertical. <code>align-items: center;</code> centers them horizontally in this case.</p>
+    <div class="container column-center">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+
+    <h2>4. Flex Wrap</h2>
+    <p>By default, flex items will try to fit onto one line. <code>flex-wrap: wrap;</code> allows them to wrap onto multiple lines.</p>
+    <div class="container flex-wrap-example">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+      <div class="box">Box 4</div>
+      <div class="box">Box 5</div>
+      <div class="box">Box 6</div>
+    </div>
+
+    <h2>5. Flex Item properties (flex-grow)</h2>
+    <p>Individual items can grow to fill available space using the <code>flex-grow</code> property. Here, Box 2 has <code>flex-grow: 1;</code> while the others do not.</p>
+    <div class="container item-properties">
+      <div class="box">Box 1</div>
+      <div class="box grow-box">Box 2 (Grows)</div>
+      <div class="box">Box 3</div>
+    </div>
+
+</body>
+</html>
