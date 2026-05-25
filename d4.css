@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+    body {
+        background: rgb(255, 2, 2);
+    }
+}
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+    }
+}
