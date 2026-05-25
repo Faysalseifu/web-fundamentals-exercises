@@ -558,8 +558,89 @@ img {
 }
 
 .site-footer {
-  padding: 1rem 0 2rem;
+  padding: 2rem 0 2.5rem;
   color: var(--muted);
+}
+
+.footer-panel {
+  background: linear-gradient(
+    180deg,
+    rgba(12, 24, 43, 0.96),
+    rgba(7, 15, 27, 0.96)
+  );
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.footer-brand,
+.footer-links,
+.footer-contact,
+.footer-social {
+  flex: 1 1 220px;
+}
+
+.footer-brand h3,
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  margin: 0 0 0.75rem;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+.footer-brand p,
+.footer-links a,
+.footer-contact p,
+.footer-social a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: var(--text);
+}
+
+.footer-contact {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-bottom {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   text-align: center;
 }
 
