@@ -1,0 +1,83 @@
+body {
+   font-family: Arial, sans-serif;
+   padding: 20px;
+}
+
+h2 {
+   margin-top: 40px;
+   color: #333;
+}
+
+code {
+   background: #eee;
+   padding: 2px 5px;
+   border-radius: 4px;
+}
+
+/* Base Container styles */
+.container {
+   display: flex;
+   width: 500px;
+   height: 300px; /* Reduced height from 500px for better page layout */
+   background: rgb(186, 236, 194);
+   border: 1px solid black;
+   margin-bottom: 20px;
+}
+
+/* Base Box styles */
+.box {
+   width: 80px; /* Reduced width to fit wrap examples */
+   height: 80px;
+   background: rgb(228, 51, 51);
+   margin: 5px; /* Reduced from 10px */
+   color: white;
+   display: flex; /* We can use flexbox inside flex items too! */
+   justify-content: center; /* Center horizontally inside the box */
+   align-items: center; /* Center vertically inside the box */
+   text-align: center;
+   font-weight: bold;
+}
+
+/* 1. Basic Flex (Original) */
+.basic-flex {
+   justify-content: center;
+   align-items: end;
+}
+
+/* 2. Justify Content: space-between */
+.space-between {
+   /* Distributes space between items along the row */
+   justify-content: space-between; 
+   /* Centers items vertically (since row is default) */
+   align-items: center; 
+}
+
+/* 3. Flex Direction: Column & Align Items */
+.column-center {
+   /* Changes the flow from left-to-right to top-to-bottom */
+   flex-direction: column; 
+   /* Along the main axis (now vertical), distribute items */
+   justify-content: space-evenly;
+   /* Along the cross axis (now horizontal), center items */
+   align-items: center; 
+}
+
+/* 4. Flex Wrap */
+.flex-wrap-example {
+   /* Allows items to break to the next line if the container is too small */
+   flex-wrap: wrap; 
+   /* Aligns the multiple lines (not just individual items) */
+   align-content: flex-start; 
+}
+
+/* 5. Flex Item properties (grow) */
+.item-properties {
+   /* Items will stretch vertically if no align-items default or if set to stretch */
+   align-items: center;
+}
+
+.grow-box {
+   /* This item takes up all remaining horizontal space */
+   flex-grow: 1; 
+   background: rgb(51, 101, 228); /* Changed color to highlight */
+}
