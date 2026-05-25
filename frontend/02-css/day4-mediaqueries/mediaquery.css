@@ -1,0 +1,158 @@
+/* --- BASE STYLES (Mobile First) --- */
+/* We design for the smallest screen first, then add media queries for larger screens */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header and Navigation (Mobile view: stacked) */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.nav-menu ul li {
+    margin-bottom: 10px;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.intro {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.resize-hint {
+    color: #d9534f;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Grid System (Mobile view: 1 column) */
+.grid-system {
+    display: flex;
+    flex-direction: column; /* Stack vertically on small screens */
+    gap: 15px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-left: 5px solid #d9534f; /* Red border for mobile */
+}
+
+.device-status {
+    margin-top: 30px;
+    padding: 15px;
+    background: #e9ecef;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+
+/* --- MEDIA QUERIES --- */
+
+/* 1. Tablet view (min-width: 600px) */
+/* These styles ONLY apply if the screen is at least 600px wide */
+@media (min-width: 600px) {
+    .header {
+        background-color: #0275d8; /* Header becomes blue */
+    }
+
+    .device-name::before {
+        content: "Tablet"; /* Change indicator text */
+        color: #0275d8;
+    }
+    .device-name { font-size: 0; }
+    .device-name::before { font-size: 1.2rem; }
+
+    .card {
+        border-left-color: #0275d8; /* Blue border for tablet */
+    }
+
+    /* Make grid 2 columns */
+    .grid-system {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1 1 45%; /* Cards take up ~45% width */
+    }
+}
+
+/* 2. Desktop view (min-width: 992px) */
+/* These styles ONLY apply if the screen is at least 992px wide, overriding tablet styles */
+@media (min-width: 992px) {
+    .header {
+        background-color: #5cb85c; /* Header becomes green */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    /* Make navigation horizontal on desktop */
+    .nav-menu ul {
+        display: flex;
+        margin-top: 0;
+    }
+
+    .nav-menu ul li {
+        margin-bottom: 0;
+        margin-left: 15px;
+    }
+
+    .nav-menu ul li a {
+        background-color: transparent;
+    }
+
+    .nav-menu ul li a:hover {
+        background-color: #4cae4c; /* Hover effect added on desktop */
+    }
+
+    .device-name::before {
+        content: "Desktop"; /* Change indicator text */
+        color: #5cb85c;
+    }
+
+    .card {
+        border-left-color: #5cb85c; /* Green border for desktop */
+        flex: 1; /* Cards are equal width by default (3 columns) */
+    }
+}

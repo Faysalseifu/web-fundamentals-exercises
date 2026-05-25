@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mediaquery.css">
+    <title>Media Queries Explanation</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Understanding Media Queries</h1>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>What is a Media Query?</h2>
+            <p>Media queries are a key part of responsive web design. They allow you to apply CSS styles only when specific conditions are met, such as the width of the browser window or the device type.</p>
+            <p class="resize-hint">Resize your browser window to see the layout and colors change!</p>
+        </section>
+
+        <section class="grid-system">
+            <div class="card">
+                <h3>Card 1</h3>
+                <p>On mobile, this card takes full width. On desktops, it sits next to the others.</p>
+            </div>
+            <div class="card">
+                <h3>Card 2</h3>
+                <p>Watch how the layout shifts from a single column to a multi-column grid.</p>
+            </div>
+            <div class="card">
+                <h3>Card 3</h3>
+                <p>Media queries make this possible by changing the flex or grid properties.</p>
+            </div>
+        </section>
+
+        <div class="device-status">
+            Currently viewing on: <span class="device-name">Mobile</span>
+        </div>
+    </main>
+</body>
+</html>
