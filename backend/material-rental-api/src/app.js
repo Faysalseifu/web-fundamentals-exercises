@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const authRoutes = require('./routes/auth.routes');
+const materialRoutes = require('./routes/material.routes');
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.use(morgan('dev'));
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/materials', materialRoutes);
 
 // Global Error Handler
 app.use((err, req, res, next) => {

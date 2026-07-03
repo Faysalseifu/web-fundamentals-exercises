@@ -22,3 +22,26 @@ enum Role {
   ADMIN
   EMPLOYEE
 }
+
+model Material {
+  id            Int      @id @default(autoincrement())
+  nameEn        String   @unique
+  nameAm        String?
+  nameOr        String?
+  nameSo        String?
+
+  descriptionEn String?
+  descriptionAm String?
+  descriptionOr String?
+  descriptionSo String?
+
+  quantity      Int
+  availableQty  Int
+
+  dailyRate     Decimal  @db.Decimal(10,2)
+
+  imageUrl      String?
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
